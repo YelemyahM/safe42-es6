@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Safe42 to ES6](#safe42-to-es6)
+  - [Introduction :](#introduction-)
+  - [Pré-requis :](#pr%C3%A9-requis-)
+  - [Comment l'utiliser :](#comment-lutiliser-)
+  - [Fonctions :](#fonctions-)
+    - [Exemple d'utilisation :](#exemple-dutilisation-)
+    - [Fonctions :](#fonctions--1)
+    - [@Constructeur :](#constructeur-)
+      - [**_initialize()**](#_initialize)
+      - [**_onClickDigits**](#_onclickdigits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Safe42 to ES6
 
 ## Introduction :
@@ -41,6 +58,8 @@ const safe42 = new Safe42(storage);
 safe42.run();
 ```
 
+### Fonctions :
+
 ### @Constructeur :
 
 Paramètres : 
@@ -51,8 +70,6 @@ _storage                 | Object | {}
 _currentPassword         | String | '42'
 _countBadPassword        | Number | 2
 _delayInactivity       | Number | 10000
-
-### Fonctions :
 
 #### **_initialize()**
 
