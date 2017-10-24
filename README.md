@@ -4,8 +4,8 @@
 
 - [Safe42 to ES6](#safe42-to-es6)
   - [Introduction](#introduction)
-  - [Pré-requis :](#pr%C3%A9-requis-)
-  - [Comment l'utiliser :](#comment-lutiliser-)
+  - [Pré-requis](#pr%C3%A9-requis)
+  - [Comment l'utiliser](#comment-lutiliser)
   - [Fonctions](#fonctions)
     - [Exemple d'utilisation](#exemple-dutilisation)
     - [Fonctions](#fonctions-1)
