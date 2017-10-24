@@ -197,7 +197,7 @@ module.exports = {
         "radix": 2,
         "require-jsdoc": 2,
         "require-yield": 2,
-        "semi": 0,
+        "semi": 2,
         "semi-spacing": 2,
         "sort-imports": 2,
         "sort-vars": 2,
