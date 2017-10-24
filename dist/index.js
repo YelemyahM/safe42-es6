@@ -66,6 +66,9 @@ class DataStorage {
 }
 
 class DisplayScreen {
+  /**
+   * @constructor
+   */
   constructor() {
     this.settings = {
       'default': {
@@ -105,6 +108,12 @@ class DisplayScreen {
     return dom;
   }
 
+  /**
+   * set message
+   * @param {String} type
+   * @param {String} message
+   * @return {Object} message
+   */
   setMessage(type, message) {
     for (let key in this.settings) {
       if (key === type) {
@@ -120,9 +129,12 @@ class DisplayScreen {
   /**
    * Render
    * @param {string} type
+   * @param {string} message
    * @return {DisplayScreen}
    */
-  render(type) {
+  render(type, message) {
+    this.setMessage(type, message);
+
     const el = document.querySelector('#display-screen .col');
 
     el.innerHTML = this.tpl(this.settings[type]);
@@ -156,7 +168,7 @@ class Safe42 {
    */
   _initialize() {
     this._delayInactivity = 10000;
-    this.displayScreen.render('default');
+    this.displayScreen.render('default', '');
     this._setTimeoutDigitsByTimer = this._setTimeoutDigitsByTimer = setTimeout(function () {}, 0);
   }
 
@@ -167,8 +179,7 @@ class Safe42 {
   run() {
     this._onClickDigits(key => {
       this._setCurrentPassword(key);
-      this.displayScreen.setMessage('default', this._setEncodeCurrentPassword(this._currentPassword));
-      this.displayScreen.render('default');
+      this.displayScreen.render('default', this._setEncodeCurrentPassword(this._currentPassword));
 
       if (this._getAction(key)) {
         this._getAction(key)();
@@ -204,29 +215,25 @@ class Safe42 {
     const actions = {
       'enter': () => {
         if (!this._checkPassword(this._currentPassword)) {
-          this.displayScreen.setMessage('error', 'Bad password!');
-          this.displayScreen.render('error');
+          this.displayScreen.render('error', 'Bad password!');
           this._countLimitPassword(this._countBadPassword);
           this._currentPassword = '';
 
           return;
         }
 
-        this.displayScreen.setMessage('success', 'Your password is valid!');
-        this.displayScreen.render('success');
+        this.displayScreen.render('success', 'Your password is valid!');
         this._renderDataConsole(this.dataStorage.get(this._currentPassword));
         this._currentPassword = '';
 
         return;
       },
       'delete': () => {
-        this.displayScreen.setMessage('success', 'data removed!'); // this.displayScreen.setMessage(''data removed!'')
-        this.displayScreen.render('success'); // this.displayScreen.render('success')
+        this.displayScreen.render('success', 'data removed!');
         this._currentPassword = '';
       },
       'update': () => {
-        this.displayScreen.setMessage('success', 'data updated!');
-        this.displayScreen.render('success');
+        this.displayScreen.render('success', 'data updated!');
         this._currentPassword = '';
       }
     };
@@ -326,8 +333,7 @@ class Safe42 {
    */
   _countLimitPassword(countBadPassword) {
     if (countBadPassword == 3) {
-      this.displayScreen.setMessage('error', 'Kim Jung Un bomber-H!');
-      this.displayScreen.render('error');
+      this.displayScreen.render('error', 'Kim Jung Un bomber-H!');
       this._storage = [];
       this._countBadPassword = 0;
     }
@@ -345,8 +351,7 @@ class Safe42 {
     clearTimeout(this._setTimeoutDigitsByTimer);
 
     this._setTimeoutDigitsByTimer = setTimeout(() => {
-      this.displayScreen.setMessage('default', '');
-      this.displayScreen.render('default');
+      this.displayScreen.render('default', '');
       this._currentPassword = '';
     }, delay);
   }
