@@ -1,0 +1,13 @@
+/** 
+ * Display screen
+ */
+#display-screen .alert {
+  padding-top: 25px;
+  border: 3px solid #19242b;
+  border-radius: 6px 6px 6px 6px;
+
+  /* Inner Shadow*/
+  -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.56);
+  -moz-box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.56);
+  box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.56);
+}

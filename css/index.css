@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "display-screen.css";
+@import "digits.css";
+
+/**
+ * Global
+ */
+body {
+  background: #293a46;
+}
+
+h1 {
+  color: white;
+}
+
+hr {
+  background: #1e2a33;
+}
+
+.hide {
+  display: none;
+}
+
+/**
+ * Bootstrap modified
+ */
+.jumbotron {
+  background: #212e38;
+  /* Shadow */
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.56);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.56);
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.56);
+}
+
+.row {
+  margin-top: 5px;
+}
