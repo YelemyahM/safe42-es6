@@ -9,7 +9,7 @@
   - [Fonctions :](#fonctions-)
     - [Exemple d'utilisation :](#exemple-dutilisation-)
     - [Fonctions :](#fonctions--1)
-      - [**@Constructeur** :](#constructeur-)
+      - [**@Constructeur**](#constructeur)
       - [**_initialize()**](#_initialize)
       - [**_onClickDigits**](#_onclickdigits)
 
@@ -60,7 +60,7 @@ safe42.run();
 
 ### Fonctions :
 
-#### **@Constructeur** :
+#### **@Constructeur**
 
 Paramètres : 
 
