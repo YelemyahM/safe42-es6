@@ -17,7 +17,7 @@
 
 # Safe42 to ES6
 
-## Introduction :
+## Introduction
 
 Safe42 est une coffre qui permet d'enregistrer ses données personnelles et d'y accéder grâce à un code d'accès. 
 
@@ -30,9 +30,9 @@ Safe42 est une coffre qui permet d'enregistrer ses données personnelles et d'y 
 * `git clone https://github.com/xzen/safe42-es6.git`
 * `npm i`
 
-## Fonctions :
+## Fonctions
 
-### Exemple d'utilisation :
+### Exemple d'utilisation
 
 ```javascript
 const storage = [{
@@ -58,7 +58,7 @@ const safe42 = new Safe42(storage);
 safe42.run();
 ```
 
-### Fonctions :
+### Fonctions
 
 #### **@Constructeur**
 
@@ -85,7 +85,7 @@ Nom   | Type      | Valeur
 
 Permet de capturer et de récupérer les valeurs des touches appuyées.
 
-Paramètres : 
+Paramètres
 
 Nom         | Type      | Valeur 
 ----------- | --------- | --------------
