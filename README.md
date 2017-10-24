@@ -3,12 +3,12 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Safe42 to ES6](#safe42-to-es6)
-  - [Introduction :](#introduction-)
+  - [Introduction](#introduction)
   - [Pré-requis :](#pr%C3%A9-requis-)
   - [Comment l'utiliser :](#comment-lutiliser-)
-  - [Fonctions :](#fonctions-)
-    - [Exemple d'utilisation :](#exemple-dutilisation-)
-    - [Fonctions :](#fonctions--1)
+  - [Fonctions](#fonctions)
+    - [Exemple d'utilisation](#exemple-dutilisation)
+    - [Fonctions](#fonctions-1)
       - [**@Constructeur**](#constructeur)
       - [**_initialize()**](#_initialize)
       - [**_onClickDigits**](#_onclickdigits)
