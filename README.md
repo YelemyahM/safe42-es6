@@ -21,11 +21,11 @@
 
 Safe42 est une coffre qui permet d'enregistrer ses données personnelles et d'y accéder grâce à un code d'accès. 
 
-## Pré-requis :
+## Pré-requis
 
 * Installer `nodejs` & `npm`
 
-## Comment l'utiliser :
+## Comment l'utiliser
 
 * `git clone https://github.com/xzen/safe42-es6.git`
 * `npm i`
